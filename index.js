@@ -1,12 +1,8 @@
 const fs = require('fs');
-
+const a = "Hello Node"
 //  This is asyncronous
-fs.readFile('./sample.txt','utf-8',(err,data)=>{
-    if(err){
-        console.log(err);
-    } else {
-        console.log(data);
-    }
+fs.writeFile('./sample.txt',a,()=>{
+    console.log("Written");
 })
 
 console.log("This is First");
